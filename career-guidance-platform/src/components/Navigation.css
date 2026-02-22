@@ -1,0 +1,107 @@
+.navbar {
+  background-color: white;
+  border-bottom: 2px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+
+.navbar-student {
+  border-bottom-color: var(--student-color);
+}
+
+.navbar-admin {
+  border-bottom-color: var(--admin-color);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--admin-color);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+  margin: 0 40px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  padding: 8px 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.navbar-admin .nav-link:hover,
+.navbar-admin .nav-link.active {
+  color: var(--admin-color);
+  border-bottom-color: var(--admin-color);
+}
+
+.btn-logout {
+  background-color: #d32f2f;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  font-weight: 500;
+}
+
+.btn-logout:hover {
+  background-color: #b71c1c;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    margin: 0 15px;
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .btn-logout {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .btn-logout svg {
+    width: 16px;
+    height: 16px;
+  }
+}
